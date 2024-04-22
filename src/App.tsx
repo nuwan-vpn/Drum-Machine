@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { AudioClip } from './types';
 
+
 const audioClips: AudioClip[] = [
   {
     keyTrigger: "Q",
@@ -54,7 +55,16 @@ function App() {
 
   return (
     <>
-      
+      <div className="container" id="drum-machine">
+        <div id="display">
+          <h1>Drum Machine</h1>
+          <div className="drum-pad">
+            {audioClips.map((clip) =>(
+            <Drum /> 
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   )
 }
