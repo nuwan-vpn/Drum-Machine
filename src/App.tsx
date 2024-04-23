@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { AudioClip } from './types';
+import Drum from './Drum';
 
 
 const audioClips: AudioClip[] = [
@@ -60,7 +61,7 @@ function App() {
           <h1>Drum Machine</h1>
           <div className="drum-pad">
             {audioClips.map((clip) =>(
-            <Drum /> 
+            <Drum audioClip={clip} key={clip.keyTrigger} /> 
             ))}
           </div>
         </div>
